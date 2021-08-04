@@ -12,11 +12,11 @@ setwd("C:/Users/Johann Hawe/Work/data_transfer/hmgu/meqtl_paper")
 
 # ------------------------------------------------------------------------------
 # boxplots for cpg enrichment in distance groups
-load(paste('./LONGRANGE/', 1, '_v2.RData', sep=''))
+load(paste('data/LONGRANGE/', 1, '_v2.RData', sep=''))
 ratios=as.numeric(as.character(resu[,3]))
 for(i in 2:1100){
   tryCatch({
-    load(paste('./LONGRANGE/', i, '_v2.RData', sep=''))
+    load(paste('data/LONGRANGE/', i, '_v2.RData', sep=''))
     ratios=cbind(ratios, as.numeric(as.character(resu[,3])))
   }, error = function(error) {return(NA)})
 }

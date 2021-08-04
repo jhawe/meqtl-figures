@@ -3,9 +3,9 @@
 setwd("C:/Users/Johann Hawe/Work/data_transfer/hmgu/meqtl_paper")
 
 # load all raw/previous data from BL and ML
-load('chessboard/sigproces_110214.RData')
-load('chessboard/anno_170714.RData')
-load("chessboard/cosmopairs_chessboard_070617.RData")
+load('data/chessboard/sigproces_110214.RData')
+load('data/chessboard/anno_170714.RData')
+load("data/chessboard/cosmopairs_chessboard_070617.RData")
 
 rm(sig.mat, stats, win.mat, dens)
 rm(annometh, annosnp, chrend, chrstart, cumuchrl2, xcld)
@@ -31,7 +31,7 @@ res.dens <- data.frame(cbind(win$c,
                              win.dens))
 colnames(res.dens)[1:2] = c('c', 'g')
 
-save.image("chessboard/preprocessed.RData")
+save.image("data/chessboard/preprocessed.RData")
 
 # cis and longrange cis associations are too many to properly display in a
 # meaningful way -> round positions and save unique sets
@@ -44,7 +44,7 @@ sigtab.longrange$gpos.cpg <- round(sigtab.longrange$gpos.cpg,-3)
 sigtab.longrange$gpos.snp <- round(sigtab.longrange$gpos.snp,-3)
 sigtab.longrange <- unique(sigtab.longrange)
 
-save.image("chessboard/preprocessed_cis_rounded_1k.RData")
+save.image("data/chessboard/preprocessed_cis_rounded_1k.RData")
 
 sigtab.cis$gpos.cpg <- round(sigtab.cis$gpos.cpg,-4)
 sigtab.cis$gpos.snp <- round(sigtab.cis$gpos.snp,-4)
@@ -54,7 +54,7 @@ sigtab.longrange$gpos.cpg <- round(sigtab.longrange$gpos.cpg,-4)
 sigtab.longrange$gpos.snp <- round(sigtab.longrange$gpos.snp,-4)
 sigtab.longrange <- unique(sigtab.longrange)
 
-save.image("chessboard/preprocessed_cis_rounded_10k.RData")
+save.image("data/chessboard/preprocessed_cis_rounded_10k.RData")
 
 
 sigtab.cis$gpos.cpg <- round(sigtab.cis$gpos.cpg,-5)
@@ -65,7 +65,7 @@ sigtab.longrange$gpos.cpg <- round(sigtab.longrange$gpos.cpg,-5)
 sigtab.longrange$gpos.snp <- round(sigtab.longrange$gpos.snp,-5)
 sigtab.longrange <- unique(sigtab.longrange)
 
-save.image("chessboard/preprocessed_cis_rounded_100k.RData")
+save.image("data/chessboard/preprocessed_cis_rounded_100k.RData")
 
 # all done
 sessionInfo()

@@ -7,7 +7,7 @@ require(plotrix)
 setwd("C:/Users/Johann Hawe/Work/data_transfer/hmgu/meqtl_paper")
 
 # load prepared plot data
-load('chessboard/preprocessed_cis_rounded_100k.RData')
+load('data/chessboard/preprocessed_cis_rounded_100k.RData')
 
 # plot -------------------------------------------------------------------------
 

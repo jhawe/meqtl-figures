@@ -5,7 +5,7 @@ library(cowplot)
 theme_set(theme_cowplot() + background_grid(major="x"))
 
 setwd("C:/Users/Johann Hawe/Work/data_transfer/hmgu/meqtl_paper")
-load("cosmopairs_combined_151216.RData")
+load("data/cosmopairs_combined_151216.RData")
 
 cosmo_trans <- cosmo %>% mutate(is_trans = snp.chr != cpg.chr) %>% 
   filter(is_trans)
@@ -104,4 +104,3 @@ gp <- ggplot(plot_data,
   ), legend.position = "none")
 
 save_plot("manhattan.pdf", gp, base_asp = 2, ncol=1.5, nrow=1.5)
-save_plot("manhattan_edited.pdf", gp, base_asp = 2, ncol=1.5, nrow=1.5)

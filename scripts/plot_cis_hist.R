@@ -10,7 +10,7 @@ theme_set(theme_cowplot())
 
 setwd("C:/Users/Johann Hawe/Work/data_transfer/hmgu/meqtl_paper")
 
-load("cosmopairs_combined_151216.RData")
+load("data/cosmopairs_combined_151216.RData")
 
 # ------------------------------------------------------------------------------
 # histogram of significant associations

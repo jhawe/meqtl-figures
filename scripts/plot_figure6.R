@@ -13,21 +13,21 @@ setwd("C:/Users/Johann Hawe/Work/data_transfer/hmgu/meqtl_paper")
 #asthma.example
 
 # plot saved in 'cosmo.repl'
-load("iqtl_figure/cosmo_replication_isolated_cells.RData")
+load("data/iqtl_figure/cosmo_replication_isolated_cells.RData")
 cosmo.repl <- cosmo.repl + theme(legend.position = c(0.75,0.8))
 cosmo.repl
 
 # plot saved in "manhatten"
-load("iqtl_figure/example_iqtl_MAGNETIC_HDL.C_manhattan.RData")
+load("data/iqtl_figure/example_iqtl_MAGNETIC_HDL.C_manhattan.RData")
 manhattan <- manhattan + background_grid() + 
   theme(panel.border = element_rect(size = 1, color="black"))
 
 # plot saved in "enrich.plot"
-load("iqtl_figure/volcano_plot.RData")
+load("data/iqtl_figure/volcano_plot.RData")
 enrich.plot
 
 # iQTL replication
-load("iqtl_figure/cohort_replication_cd8t.RData")
+load("data/iqtl_figure/cohort_replication_cd8t.RData")
 rm(all.iqtl)
 cohort_replication <- cohort_replication + 
   theme(legend.position = "none")
