@@ -107,18 +107,18 @@ for (m in 1:(length(chrborders) - 1)) {
   }
 }
 print(date())
-# points(sigtab.cis[, 1],
-#        sigtab.cis[, 2],
-#        pch = 20,
-#        col = "#CE4A09",
-#        cex = 1.2)
-# points(
-#   sigtab.longrange[, 1],
-#   sigtab.longrange[, 2],
-#   pch = 20,
-#   col = "#1C8F64",
-#   cex = 1.2
-# )
+points(sigtab.cis[, 1],
+       sigtab.cis[, 2],
+       pch = 20,
+       col = "#009E73",
+       cex = 1.2)
+points(
+  sigtab.longrange[, 1],
+  sigtab.longrange[, 2],
+  pch = 20,
+  col = "#AA4499",
+  cex = 1.2
+)
 points(
   sigtab.trans[, 1],
   sigtab.trans[, 2],

@@ -21,7 +21,7 @@ for (i in 2:22) {
 }
 
 # colors for background grid
-color <- rep(c('#0000FF20', 'white'), (length(chrborders) + 1))
+color <- rep(c('#DDDDDD', 'white'), (length(chrborders) + 1))
 mn <- win$mn
 sn <- win$sn
 win.dens <- cbind(mn, sn)
