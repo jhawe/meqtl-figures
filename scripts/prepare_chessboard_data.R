@@ -36,23 +36,30 @@ save.image("data/chessboard/preprocessed.RData")
 # cis and longrange cis associations are too many to properly display in a
 # meaningful way -> round positions and save unique sets
 
+print(dim(sigtab.cis))
+print(dim(sigtab.longrange))
+
 sigtab.cis$gpos.cpg <- round(sigtab.cis$gpos.cpg,-3)
 sigtab.cis$gpos.snp <- round(sigtab.cis$gpos.snp,-3)
 sigtab.cis <- unique(sigtab.cis)
+print(dim(sigtab.cis))
 
 sigtab.longrange$gpos.cpg <- round(sigtab.longrange$gpos.cpg,-3)
 sigtab.longrange$gpos.snp <- round(sigtab.longrange$gpos.snp,-3)
 sigtab.longrange <- unique(sigtab.longrange)
+print(dim(sigtab.longrange))
 
 save.image("data/chessboard/preprocessed_cis_rounded_1k.RData")
 
 sigtab.cis$gpos.cpg <- round(sigtab.cis$gpos.cpg,-4)
 sigtab.cis$gpos.snp <- round(sigtab.cis$gpos.snp,-4)
 sigtab.cis <- unique(sigtab.cis)
+print(dim(sigtab.cis))
 
 sigtab.longrange$gpos.cpg <- round(sigtab.longrange$gpos.cpg,-4)
 sigtab.longrange$gpos.snp <- round(sigtab.longrange$gpos.snp,-4)
 sigtab.longrange <- unique(sigtab.longrange)
+print(dim(sigtab.longrange))
 
 save.image("data/chessboard/preprocessed_cis_rounded_10k.RData")
 
@@ -60,12 +67,21 @@ save.image("data/chessboard/preprocessed_cis_rounded_10k.RData")
 sigtab.cis$gpos.cpg <- round(sigtab.cis$gpos.cpg,-5)
 sigtab.cis$gpos.snp <- round(sigtab.cis$gpos.snp,-5)
 sigtab.cis <- unique(sigtab.cis)
+print(dim(sigtab.cis))
 
 sigtab.longrange$gpos.cpg <- round(sigtab.longrange$gpos.cpg,-5)
 sigtab.longrange$gpos.snp <- round(sigtab.longrange$gpos.snp,-5)
 sigtab.longrange <- unique(sigtab.longrange)
+print(dim(sigtab.longrange))
 
 save.image("data/chessboard/preprocessed_cis_rounded_100k.RData")
+
+sigtab.cis$gpos.cpg <- round(sigtab.cis$gpos.cpg,-6)
+sigtab.cis$gpos.snp <- round(sigtab.cis$gpos.snp,-6)
+sigtab.cis <- unique(sigtab.cis)
+print(dim(sigtab.cis))
+
+save.image("data/chessboard/preprocessed_cis_rounded_1M_longrange_100k.RData")
 
 # all done
 sessionInfo()

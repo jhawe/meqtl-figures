@@ -7,11 +7,16 @@ require(plotrix)
 setwd("C:/Users/Johann Hawe/Work/data_transfer/hmgu/meqtl_paper")
 
 # load prepared plot data
-load('data/chessboard/preprocessed_cis_rounded_100k.RData')
+load('data/chessboard/preprocessed_cis_rounded_1M_longrange_100k.RData')
+#load('data/chessboard/preprocessed_cis_rounded_100k_trans_rounded_10k.RData')
 
 # plot -------------------------------------------------------------------------
 
-pdf(file = "chessboard.pdf",
+#tiff(file = "chessboard.tiff",
+#    height = 18,
+#    width = 18, units = "in", res = 300)
+
+pdf(file = "chessboard_test_1M.pdf",
     height = 18,
     width = 18)
 
@@ -111,20 +116,20 @@ points(sigtab.cis[, 1],
        sigtab.cis[, 2],
        pch = 20,
        col = "#009E73",
-       cex = 1.2)
+       cex = 1.7)
 points(
   sigtab.longrange[, 1],
   sigtab.longrange[, 2],
   pch = 20,
-  col = "#AA4499",
-  cex = 1.2
+  col = "#CC51B7",
+  cex = 1.7
 )
 points(
   sigtab.trans[, 1],
   sigtab.trans[, 2],
   pch = 20,
   col = 'black',
-  cex = 1.2
+  cex = 1.7
 )
 print(date())
 box(lwd = 1.5)
